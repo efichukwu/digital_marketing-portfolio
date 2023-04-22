@@ -180,9 +180,29 @@ ul.button li a:hover{
 .service{
 	background:#FFF;
 	padding: 4em 0;
+	overflow-x: hidden;
 }
 .service-grid{
 	text-align:center;
+}
+.service-grids {
+	display: flex;
+	flex-wrap: nowrap;
+	animation: scroll 20s linear infinite;
+}
+.service-grid {
+	flex-shrink: 0;
+	margin-right: 30px;
+	vertical-align: top;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }
 .service-grid h3{
 	color: #333333;
@@ -285,11 +305,11 @@ ul.button li a:hover{
 .Project a:hover{
 	border:solid 1px #808080;
 }
-/*-- photography --*/
-.photography {
+/*-- portfolio --*/
+.portfolio {
 	margin-top: 5em;
 }
-.photography-images{
+.portfolio-images{
 	float: left;
 	width: 32.5%;
 	position: relative;
@@ -298,7 +318,7 @@ ul.button li a:hover{
 .middle{
 	margin:0 1em;
 }
-.photography-images img{
+.portfolio-images img{
 	width:100%;
 }
 .caption {
@@ -320,7 +340,7 @@ ul.button li a:hover{
 	top: 43%;
 	right: 46%;
 }
-.photography-images:hover div.caption {
+.portfolio-images:hover div.caption {
 	display: block;
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
@@ -505,8 +525,14 @@ form input[type="submit"]:hover{
 	display: block;
 	margin-right: 2em;
 }
-.footer-right ul li a.twitter{
-	background: url(../images/icons.png) no-repeat -173px -229px;
+.footer-right ul li a.instagram{
+	background: url(../images/icons8-instagram-48.png) no-repeat -173px -229px;
+	width: 38px;
+	height: 37px;
+	display: block;
+}
+.footer-right ul li a.linkedin{
+	background: url(../images/icons8-linkedin-48.png) no-repeat -173px -229px;
 	width: 38px;
 	height: 37px;
 	display: block;
@@ -514,9 +540,7 @@ form input[type="submit"]:hover{
 .footer-right ul li a.facebook:hover{
 	background: url(../images/icons.png) no-repeat -129px -272px;
 }
-.footer-right ul li a.twitter:hover{
-	background: url(../images/icons.png) no-repeat -173px -272px;
-}
+
 /*-- to-top --*/
 #toTop {
 	display: none;
@@ -579,7 +603,7 @@ form input[type="submit"]:hover{
 		overflow: hidden;
 		height: 90px;
 	}
-	.photography-images {
+	.portfolio-images {
 		width: 32.3%;
 	}
 }
@@ -647,7 +671,7 @@ form input[type="submit"]:hover{
 	.middle {
 		margin: 0;
 	}
-	.photography-images {
+	.portfolio-images {
 		width: 46%;
 		margin: 1em;
 	}
@@ -678,7 +702,7 @@ form input[type="submit"]:hover{
 	.Project a {
 		padding: .5em 2em;
 	}
-	.photography-images {
+	.portfolio-images {
 		width: 45%;
 	}
 }
@@ -719,7 +743,7 @@ form input[type="submit"]:hover{
 	a.boxclose {
 		right: 1.7%;
 	}
-	.photography-images {
+	.portfolio-images {
 		width: 43%;
 	}
 	.caption span {
@@ -815,7 +839,7 @@ form input[type="submit"]:hover{
 	.contact-info h2 {
 		font-size: 24px;
 	}
-	.photography-images {
+	.portfolio-images {
 		width: 44.8%;
 		margin: .5em;
 	}	
