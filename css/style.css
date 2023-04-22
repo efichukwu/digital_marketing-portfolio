@@ -12,7 +12,7 @@ html,body {
 }
 /*-- header --*/
 .header-bg{
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	background: url(../images/header_background.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	min-height: 700px;
 	position:relative;
@@ -482,6 +482,37 @@ form input[type="submit"]:hover{
 .bottom-right p span{
 	display:block;
 }
+
+div ul {
+	list-style: none;
+	display: flex; /* display the list items as a flex container */
+	margin-left: 2.5em;
+}
+div ul li {
+	margin: 0 10px; /* add some margin between the items */
+}
+  
+.facebook {
+	background-image: url('../images/icons8-facebook-48.png');
+}
+  
+.Instagram {
+	background-image: url('../images/icons8-instagram-48.png');
+}
+  
+.linkedin {
+	background-image: url('../images/icons8-linkedin-48.png');
+}
+  
+/* Set the size of the icons */
+.facebook, .Instagram, .linkedin {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+}
+  
+
 /*-- footer --*/
 .footer{
 	background:#333333;
